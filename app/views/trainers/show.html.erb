@@ -1,0 +1,10 @@
+<p id="notice"><%= notice %></p>
+
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= @trainer.banner_url %>');">
+  <div class="container">
+    <h1><%= @trainer.name %></h1>
+  </div>
+</div>
+
+<%= link_to 'Edit', edit_trainer_path(@trainer) %> |
+<%= link_to 'Back', trainers_path %>
