@@ -25,6 +25,7 @@ gem 'turbolinks', '~> 5'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
 # TODO: Sy figure this out
+# https://stackoverflow.com/questions/4800721/ruby-what-does-require-false-in-gemfile-mean
 
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass', '~> 5.6.1'

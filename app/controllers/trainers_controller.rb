@@ -8,6 +8,7 @@ class TrainersController < ApplicationController
 
   # GET /trainers/1
   def show
+    @pokemon = Pokemon.new
   end
 
   # GET /trainers/new
