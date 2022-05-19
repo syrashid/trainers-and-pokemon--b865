@@ -20,3 +20,44 @@ brock = Trainer.create!(
   banner_url: "https://static1.srcdn.com/wordpress/wp-content/uploads/2016/11/Brock-Pokemon-Series.jpg"
 )
 puts "Created #{Trainer.count} Pokemon Trainers 🏋️‍♂️"
+
+puts "Creating Pokemon"
+Pokemon.create!(
+  name: "Bubbles",
+  image_url: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/007.png",
+  trainer: ash
+)
+
+Pokemon.create!(
+  name: "Flint",
+  image_url: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png",
+  trainer: ash
+)
+
+Pokemon.create!(
+  name: "Ivy",
+  image_url: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/002.png",
+  trainer: ash
+)
+
+Pokemon.create!(
+  name: "Sparky",
+  image_url: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png",
+  trainer: ash
+)
+
+Pokemon.create!(
+  name: "Arcanine",
+  image_url: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/059.png",
+  trainer: gary
+)
+
+Pokemon.create!(
+  name: "Onix",
+  image_url: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/095.png",
+  trainer: brock
+)
+puts "Created #{Pokemon.count} Pokemon 🐢"
+
+
+puts "Finished Seeding 🌱"
