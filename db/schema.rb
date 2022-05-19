@@ -10,7 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_05_18_162506) do
+ActiveRecord::Schema.define(version: 2022_05_19_162338) do
+
+  create_table "moves", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "pokemons", force: :cascade do |t|
     t.integer "trainer_id", null: false
@@ -21,6 +27,15 @@ ActiveRecord::Schema.define(version: 2022_05_18_162506) do
     t.index ["trainer_id"], name: "index_pokemons_on_trainer_id"
   end
 
+  create_table "skills", force: :cascade do |t|
+    t.integer "move_id", null: false
+    t.integer "pokemon_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["move_id"], name: "index_skills_on_move_id"
+    t.index ["pokemon_id"], name: "index_skills_on_pokemon_id"
+  end
+
   create_table "trainers", force: :cascade do |t|
     t.string "name"
     t.string "banner_url"
@@ -29,4 +44,6 @@ ActiveRecord::Schema.define(version: 2022_05_18_162506) do
   end
 
   add_foreign_key "pokemons", "trainers"
+  add_foreign_key "skills", "moves"
+  add_foreign_key "skills", "pokemons"
 end

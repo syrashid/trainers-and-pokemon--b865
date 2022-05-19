@@ -11,6 +11,12 @@
     <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= pokemon.image_url %>'); background-size: cover;">
       <%= pokemon.name %>
       <%= link_to "+", pokemon_path(pokemon), method: :delete, class: 'card-remove-link' %>
+      <div class="card-tags">
+        <% pokemon.moves.each do |move| %>
+          <span><%= move.name %></span>
+        <% end %>
+        <%= link_to "+", new_pokemon_skill_path(pokemon), style: 'text-decoration: none;' %>
+      </div>
     </div>
   <% end %>
 </div>

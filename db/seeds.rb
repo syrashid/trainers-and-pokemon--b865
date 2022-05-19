@@ -61,3 +61,9 @@ puts "Created #{Pokemon.count} Pokemon 🐢"
 
 
 puts "Finished Seeding 🌱"
+names = %w(Water\ Gun Thunderbolt Ember Dig Tackle Body\ Slam)
+# ["Water Gun", "Thunderbolt"]
+
+names.each do |move|
+  Move.create!(name: move)
+end

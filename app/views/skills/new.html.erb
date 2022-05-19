@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-6">
+      <h1>Add a new move for <%= @pokemon.name %></h1>
+      <%= simple_form_for [@pokemon, @skill] do |f| %>
+        <%= f.association :move, input_html: { class: "multiple-select", multiple: true }, include_hidden: false %>
+        <%= f.button :submit, class: 'btn btn-dark' %>
+      <% end %>
+    </div>
+  </div>
+</div>
